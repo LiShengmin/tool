@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>可变高度cell</string>
+		<key>imageURL</key>
+		<string></string>
+		<key>jmpVC</key>
+		<string>VarTableCellHeightViewController</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>111</string>
+		<key>imageURL</key>
+		<string></string>
+		<key>jmpVC</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>222</string>
+		<key>imageURL</key>
+		<string></string>
+		<key>jmpVC</key>
+		<string></string>
+	</dict>
+</array>
+</plist>

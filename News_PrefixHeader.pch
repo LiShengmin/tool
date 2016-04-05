@@ -1,0 +1,65 @@
+//
+//  PrefixHeader.pch
+//  实用工具包
+//
+//  Created by Ghoul on 15/12/30.
+//  Copyright © 2015年 Ghoul. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#pragma mark- 3rd
+#import "MJExtension.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "Masonry.h"
+
+#pragma mark- MYCreat
+#import "AppString.h"
+#import "GHONetWorking.h"
+#import "UIColor+CustomColor.h"
+#import "UIImage+CustomImage.h"
+
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+
+#define ALog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+#ifdef DEBUG
+#   define ULog(fmt, ...)  { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show]; }
+#else
+#   define ULog(...)
+#endif
+
+#ifdef DEBUG
+#   define FramLog(fmt, ...) NSLog(@" %s [Line %d]\nClassNamed : %@\n    x == %f,  y == %f,\n    w == %f,h == %f",__PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__,[NSString stringWithUTF8String:object_getClassName(fmt)],fmt.frame.origin.x, fmt.frame.origin.y, fmt.frame.size.width,fmt.frame.size.height);
+#else
+#   define FramLog(...)
+#endif
+
+
+//NSLog(@"%f,%f,%f,%f",layoutAttribute.frame.origin.x, layoutAttribute.frame.origin.y, layoutAttribute.frame.size.width,layoutAttribute.frame.size.height);
+
+/**自定义 LOG调试用*/
+//#ifdef Debug
+//#define  DLOG (fmt, ...) NSLog((@"%s [Line %d] " fmt),__PRETTY_FUNCTION__,__LINE__,##__VA_ARGS__)
+//#else
+//#define DLOG(...)
+//#endif
+
+/** 版本号 */
+#if __IPHONE_OS_VERSION_MAX_ALLP
+//#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_5_1
+//[navigationController.navigationBar addSubview:imageView];
+//#else
+//[navigationController.navigationBar insertSubview:imageView atIndex:0];
+//#endif
+#endif
+
+#endif /* PrefixHeader_pch */
